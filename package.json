@@ -1,6 +1,6 @@
 {
   "name": "ez-encrypt",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "easy call encrypt",
   "type": "module",
   "files": [
@@ -8,15 +8,15 @@
   ],
   "main": "./dist/external/ez-encrypt.umd.cjs",
   "module": "./dist/external/ez-encrypt.es.js",
-  "types": "./dist/external/ez-encrypt.d.ts",
+  "types": "./dist/external/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/external/ez-encrypt.d.ts",
+      "types": "./dist/external/index.d.ts",
       "import": "./dist/external/ez-encrypt.es.js",
       "require": "./dist/external/ez-encrypt.umd.cjs"
     },
     "./bundle": {
-      "types": "./dist/bundle/ez-encrypt.d.ts",
+      "types": "./dist/bundle/index.d.ts",
       "import": "./dist/bundle/ez-encrypt.es.js",
       "require": "./dist/bundle/ez-encrypt.umd.cjs"
     }
