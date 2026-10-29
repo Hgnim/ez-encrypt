@@ -6,12 +6,27 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ez-encrypt.umd.cjs",
-  "module": "./dist/ez-encrypt.es.js",
-  "types": "./dist/ez-encrypt.d.ts",
+  "main": "./dist/external/ez-encrypt.umd.cjs",
+  "module": "./dist/external/ez-encrypt.es.js",
+  "types": "./dist/external/ez-encrypt.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/external/ez-encrypt.d.ts",
+      "import": "./dist/external/ez-encrypt.es.js",
+      "require": "./dist/external/ez-encrypt.umd.cjs"
+    },
+    "./bundle": {
+      "types": "./dist/bundle/ez-encrypt.d.ts",
+      "import": "./dist/bundle/ez-encrypt.es.js",
+      "require": "./dist/bundle/ez-encrypt.umd.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build"
+    "build": "npm run build:external && npm run build:bundle",
+    "build:external": "vite build",
+    "build:bundle": "vite build --config vite.bundle.config.ts",
+
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
