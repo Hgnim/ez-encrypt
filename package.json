@@ -1,0 +1,32 @@
+{
+  "name": "ez-encrypt",
+  "version": "0.0.0",
+  "description": "easy call encrypt",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ez-encrypt.umd.cjs",
+  "module": "./dist/ez-encrypt.es.js",
+  "types": "./dist/ez-encrypt.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hgnim/ez-encrypt.git"
+  },
+  "keywords": [],
+  "author": "Hgnim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hgnim/ez-encrypt/issues"
+  },
+  "homepage": "https://github.com/Hgnim/ez-encrypt#readme",
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^8.3.5",
+    "vite-plugin-dts": "^5.1.2"
+  }
+}
